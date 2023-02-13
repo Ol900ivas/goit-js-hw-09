@@ -10,16 +10,15 @@ refs.stopBtn.addEventListener('click', onStopBtnClick);
 let intervalId = null;
 let isActive = false;
 
+
 function onStartBtnClick() {
   if (isActive) {
     return;
   }
   isActive = true;
     intervalId = setInterval(() => {
-    refs.body.style.backgroundColor = getRandomHexColor();
-      refs.startBtn.style.backgroundColor = 'transparent';
-      refs.stopBtn.style.backgroundColor = 'white';
-        
+      refs.body.style.backgroundColor = getRandomHexColor();
+                 
   }, 1000);
      
 };
@@ -27,12 +26,11 @@ function onStartBtnClick() {
 function onStopBtnClick() {
   isActive = false;
   clearInterval(intervalId);
-      refs.stopBtn.style.backgroundColor = 'transparent';
-      refs.startBtn.style.backgroundColor = 'white';
-
-  };
+     };
 
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
+
