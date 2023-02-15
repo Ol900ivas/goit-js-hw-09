@@ -35,6 +35,5 @@ for (let i = 1; i <= Number(amountEl.value); i += 1) {
   .catch(({ position, delay }) => 
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`));
   delay = delay + Number(delayStepEl.value); 
-
-};
 }
+};
